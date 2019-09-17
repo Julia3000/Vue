@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue</title>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<h2>{{ title }} = {{ counter }}</h2>
+		<button v-on:click="riseCounter(5, 'изменино на 5', $event)">Увеличить на 5</button>
+		<button v-on:click="riseCounter(10, 'изменино на 10', $event)">Увеличить на 10</button>
+	</div>
+
+	<script>
+		new Vue ({
+			el: '#app',
+			data: {
+				counter: 0,
+				title: 'Счетчик'
+			},
+			methods: {
+				riseCounter: function(num, str, event) {
+					this.counter += num
+					this.title = str
+
+					if (num === 5) {
+						event.target.style.color ='blue'
+					} else if (num === 10) {
+						event.target.style.color = 'red'
+					}
+				}
+			}
+		})
+	</script>
+
+</body> 
+</html 

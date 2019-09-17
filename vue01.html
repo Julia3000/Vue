@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vue</title>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="text" v-model.lazy="inputValue">
+		<h2>{{ inputValue }}</h2>	
+	</div>
+
+	<script>
+		new Vue ({
+			el: '#app',
+			data: {
+				inputValue: 'Initial value'	
+			}
+		})
+	</script>
+
+</body> 
+</html 
